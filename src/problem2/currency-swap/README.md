@@ -42,8 +42,8 @@ This project leverages a modern tech stack:
 
 
 ```shellscript
-git clone https://github.com/username/currency-swap.git
-cd currency-swap
+git clone https://github.com/luongdinhkhanhvinh/code_challenge.git
+cd problem2/currency-swap
 ```
 
 2. Install dependencies:

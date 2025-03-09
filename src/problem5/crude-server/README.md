@@ -3,6 +3,7 @@
 This project demonstrates a simple CRUD (Create, Read, Update, Delete) API built with Express.js and TypeScript, using an in-memory data store for simplicity.
 
 ## Project Structure
+```plaintext
 crude-server/
 ├── src/
 │   ├── controllers/
@@ -22,20 +23,23 @@ crude-server/
 ├── package.json
 ├── tsconfig.json
 └── README.md
-
-```plaintext
+```
 
 ## API Endpoints
+```plaintext
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /api/tasks | Get all tasks (with optional filters) |
-| GET | /api/tasks/:id | Get a specific task by ID |
-| POST | /api/tasks | Create a new task |
-| PUT | /api/tasks/:id | Update an existing task |
-| DELETE | /api/tasks/:id | Delete a task |
-| GET | /health | Health check endpoint |
-| GET | / | API documentation |
+ ---------------------------------------------------------------------------
+| Method |      Endpoint           |                Description            |
+|--------|-------------------------|---------------------------------------|
+| GET    | /api/tasks              | Get all tasks (with optional filters) |
+| GET    | /api/tasks/:id          | Get a specific task by ID             |
+| POST   | /api/tasks              | Create a new task                     |
+| PUT    | /api/tasks/:id          | Update an existing task               |
+| DELETE | /api/tasks/:id          | Delete a task                         |
+| GET    | /health                 | Health check endpoint                 |
+| GET    | /                       | API documentation                     |
+ ---------------------------------------------------------------------------
+```
 
 ### Query Parameters for Filtering
 
@@ -52,17 +56,17 @@ crude-server/
 ### Installation
 
 1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
 ```
 
 2. Build the project:
 
-```shellscript
+```bash
 npm run build
 # or
 yarn build
@@ -73,7 +77,7 @@ pnpm build
 
 3. Start the server:
 
-```shellscript
+```bash
 npm start
 # or
 yarn start
@@ -83,7 +87,7 @@ pnpm start
 
 For development with auto-reload:
 
-```shellscript
+```bash
 npm run dev
 # or
 yarn dev
@@ -99,7 +103,7 @@ pnpm dev
 
 ### Create a Task
 
-```shellscript
+```bash
 curl -X POST http://localhost:3000/api/tasks \
   -H "Content-Type: application/json" \
   -d '{"title": "Complete project", "description": "Finish the CRUD API project", "status": "in_progress"}'
@@ -107,25 +111,25 @@ curl -X POST http://localhost:3000/api/tasks \
 
 ### Get All Tasks
 
-```shellscript
+```bash
 curl http://localhost:3000/api/tasks
 ```
 
 ### Get Tasks with Filters
 
-```shellscript
+```bash
 curl http://localhost:3000/api/tasks?status=pending&search=project
 ```
 
 ### Get a Specific Task
 
-```shellscript
+```bash
 curl http://localhost:3000/api/tasks/1
 ```
 
 ### Update a Task
 
-```shellscript
+```bash
 curl -X PUT http://localhost:3000/api/tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"status": "completed"}'
@@ -133,7 +137,7 @@ curl -X PUT http://localhost:3000/api/tasks/1 \
 
 ### Delete a Task
 
-```shellscript
+```bash
 curl -X DELETE http://localhost:3000/api/tasks/1
 ```
 
